@@ -15,13 +15,17 @@
     color: white;
 }
 
+h2 {
+    padding: 2rem;
+}
+
 /* Gestion du HEADER */
-header {
-    font-family: 'Nunito Regular';
+header, body, footer {
+    font-family: 'Muli Regular';
 }
 
 #bgd_header {
-    background-color: rgb(107, 106, 106);
+    background-color: #2d3e50;
     width: 100%;
     height: 8rem;
     display: flex;
@@ -32,13 +36,14 @@ header {
 #logo img {
     height: 100px;
     width: 160px;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: 1rem;
+    margin-left: 5rem;
 }
 
 #nav_container {
     display: flex;
     color: white;
+    padding-right: 6vw;
 }
 
 #nav_container li {
@@ -53,13 +58,18 @@ header {
     color: white; 
 }
 
+#filet_rouge {
+    width: 100%;
+    height: 3px;
+    background-color: #d65346;
 
+}
 /*  Main : première partie */
 
 #bgd_partie1 {
     background-image: url(../img/banner.jpeg);
     width: 100%;
-    height: 300px;
+    height: 380px;
     background-position: center;
     background-size: cover;
     text-align: center;
@@ -70,10 +80,10 @@ header {
 }
 
 #bgd_partie1 a {
-    background-color: rgb(161, 20, 20);
+    background-color: #e74d3c;
     color: white;
-    padding: 4px;
-    border-radius: 2px;
+    padding: 8px;
+    border-radius: 5px;
 }
 
 /* Seconde partie au fond bleue claire 
@@ -81,8 +91,8 @@ qui contiient d'autres parties*/
 
 #partie2 {
     width: 100%;
-    height: 1300px;
-    background-color: lightblue;
+    height: 2000px;
+    background-color: #ecf0f1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,18 +120,21 @@ qui contiient d'autres parties*/
 
 .cour {
     width: 20%;
-    background-color: aliceblue;
-    border: 1px solid black;
-    margin: 5px;
+    height: 400px;
+    background-color: white;
+    margin: 1rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;   
+    box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.32); 
 }
 
 .cour img {
     width: 100%;
     height: 50%;
+    object-fit: cover;
 }
 
 
@@ -130,10 +143,10 @@ qui contiient d'autres parties*/
 }
 
 #cours a {
-    background-color: rgb(161, 20, 20);
+    background-color: #e84c3d;
     color: white;
     padding: 4px;
-    border-radius: 2px;
+    border-radius: 5px;
     margin-bottom: 5px;
 }
 
@@ -144,15 +157,17 @@ positionnement de ressources et des ressource
  #ressources {
     display: flex;
     justify-content: center;
-    height: 300px;
-    margin-top: 30px;
+    height: 500px;
+    margin-top: 2rem;
  }
 
  .ressource {
     width: 20%;
-    border: 1px solid black;
+    height: 400px;
     background-color: white;
-    margin: 5px;    
+    margin: 1rem;     
+    box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.32); 
+    padding:1rem; 
  }
  .ressource p {
     text-align: center;
@@ -165,6 +180,9 @@ positionnement de ressources et des ressource
  }
 
  .ressource img {
+    border: 5px solid white;
+    -webkit-box-shadow: -7px 9px 7px -1px rgba(0,0,0,0.32); 
+    box-shadow: -7px 9px 7px -1px rgba(0,0,0,0.32); 
     width: 40%;
     height: 40%;
     border-radius: 50%;
@@ -172,15 +190,18 @@ positionnement de ressources et des ressource
     top: -10%;
     left: 50%;
     transform: translateX(-50%);
+    object-fit: cover;
  }
 
 /* Quatrième partie: Le formulaire */
 
 form {
-    max-width: 400vw;
+    width: 45%;
+    max-width: 600vw;
     margin: 0 auto;
     background-color: beige;
     margin-top: 30px;
+    margin-bottom: 30px;
     border: 1px solid black;
     padding: 1rem;
 }
@@ -195,7 +216,7 @@ input[type="text"],
 input[type="email"],
 select,
 textarea {
-    width: 80%;
+    width: 95%;
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -222,8 +243,108 @@ input[type="submit"]:hover {
 
 #bg_footer {
     background-color: rgb(80, 78, 78);
+    width: 100%;
+    height: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#logo_footer {
+    width: 30%;
+    padding-top: 1rem;
+}
+
+#bg_footer img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);  
+
 }
 
 
 
+#titre-footer {
+    font-size: 30px;
+    text-align: center;
+}
 
+#zone_txt {
+    text-align: center;
+}
+
+#zone_txt p{
+    padding-top: 5px;
+}
+
+#copyright {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* The Responsive !*/
+
+@media screen and (max-width: 600px) {
+  
+
+    #partie2 {
+        width: 100%;
+        height: 4000px;
+        background-color: #ecf0f1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #cours {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        justify-content: center;  
+        height: 1500px;  
+    }
+
+    .cour {
+        width: 80%;
+        height: 400px;
+        background-color: white;
+        margin: 1rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;   
+        box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.32); 
+    }
+
+
+
+
+    #ressources {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 1500px;
+        margin-top: 2rem;
+     }
+    
+     .ressource {
+        width: 80%;
+        height: 900px;
+        background-color: white;
+        margin: 1rem;     
+        box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.32); 
+        padding:1rem; 
+     }
+
+
+
+
+
+
+
+}
